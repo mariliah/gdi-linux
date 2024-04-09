@@ -21,5 +21,5 @@
 - The Linux Bible by Christopher Negus (10th Edition)
 - Linux Administration Basics by Wale Soyinka (8th Edition)
 - Networking All-in-One for Dummies by Chris Lowe
-- File System Standard by The Linux Foundation
+- File System Hierarchy by The Linux Foundation
 - Intro to Command Line by Page Crum for Girl Develop It - Chicago Chapter
