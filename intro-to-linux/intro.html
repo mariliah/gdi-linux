@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description"
+        content="Girl Develop It framework for easily creating beautiful presentations using HTML in GDI theme. Based on Hakim El Hattab's reveal.js" />
+    <meta name="author" content="Girl Develop It" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Update with GDI Course Name -->
+    <title>Introduction to Linux</title>
+
+    <link rel="icon" type="image/x-icon" href="../shared-assets/imgs/favicon.ico" />
+
+    <!-- RevealJS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/simple.css" id="theme" />
+
+    <!-- GDI Custom Theme -->
+    <link rel="stylesheet" href="../shared-assets/css/gdi-theme.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/monokai.min.css" />
+
+    <!-- Course Custom Styles if Applicable-->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Start of Slides container -->
+        <!-- Any section element in this container is displayed as a single slide -->
+        <!-- Comment out rather than delete slide instructions -->
+        <div class="slides">
+            <!-- Opening Slide -->
+            <section>
+                <img src="../shared-assets/imgs/gdi-logos/gdi-circle-logo_raspberry.png" alt="GDI Logo" width="400px"
+                    class="noborder" />
+                <br />
+                <h2 style="font-weight: bolder">Welcome to Girl Develop It</h2>
+            </section>
+
+            <!-- Course Title -->
+            <section>
+                <h2>Introduction to Linux</h2>
+            </section>
+
+            <!-- Instructor Intro -->
+            <section>
+                <div class="left-align">
+                    <h3>About me</h3>
+                </div>
+                <div class="fragment">
+                    <h4>Marilia Henriquez</h4>
+                    <p>There is no career path I haven't traveled! I am a software developer with a background in
+                        photography, fashion design, and customer service in different industries(retail, health, real
+                        estate). After graduating from a bootcamp
+                        and working for a startup, I decided to return to university and study cybersecurity technology
+                        as well as computer science.</p>
+                    <p class="fragment">But the best job I've had so far is being a mother.</p>
+                </div>
+            </section>
+
+            <!-- OPTIONAL: TA Intro -->
+
+            <!-- Student Intros; IceBreakers, etc. -->
+            <section>
+                <h3>Dream vacation destination?</h3>
+                <img src="./images/stonehenge-whs.jpg" width="400px" alt="Stonehenge" />
+                <div>
+                    <small>Image Credit:
+                        <a href="https://www.english-heritage.org.uk/visit/places/stonehenge/history-and-stories/history/significance/"
+                            target="_blank">English Heritage</a></small>
+                </div>
+            </section>
+
+            <!-- Before we start... -->
+            <section>
+                <h3>Before we start...</h3>
+                <ul>
+                    <li>Display your preferred name and pronouns</li>
+                    <li>Every question is important</li>
+                    <li>On a scale of 1 through 5, how familiar are you with Linux?</li>
+                    <li>Let's dive in!</li>
+                </ul>
+            </section>
+
+            <!-- Course Goals -->
+            <section>
+                <div class="data-bground-contrast">
+                    <h3>Overall goals</h3>
+                    <ul class="fs-28">
+                        <li>Get comfortable with the command line</li>
+                        <li>Learn why Linux is a powerful, and versatile operating system</li>
+                        <li>
+                            Learn the basics of system administration
+                        </li>
+                        <li>
+                            Deploy a web server!
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Course Agenda / Course Topics / Course Outline -->
+            <section>
+                <div>
+                    <h3>Course Outline</h3>
+                    <ol class="fs-28">
+                        <li>Introduction to Linux <small>(you are here)</small></li>
+                        <li>Essential Linux Commands</li>
+                        <li>User and Permission Management</li>
+                        <li>System Monitoring and Maintenance</li>
+                        <li>Networking Basics</li>
+                        <li>Shell Scripting Basics</li>
+                        <li>Basic System Administration</li>
+                        <li>Final Project and Review</li>
+                    </ol>
+                    <p class="left-align">Sources:</p>
+                    <small> <a
+                            href="https://www.amazon.com/Linux-Bible-Christopher-Negus/dp/1119578884/ref=sr_1_1?dib=eyJ2IjoiMSJ9.mNcvQtFzEy3kdjuvW7ViSp952YV2uuiWvHWs-p2qF2qJhqkouN0Afrh63CA2GLevpHlX83NW20nJS-QKLTRUVGWjAoMy13RJFyYTTlfn72ezx4d1cJRzYYTOm82QiitG0vHVFso3B7hLf53Q7yc9zBwEsfCanr1EscZKlFQn9-_Tmx7Aq4__waTymsOur3-NvQvDU5KkG2f6jrfZCXxeCms1ODzvm4dpgxLMneZnLSY.hMcUtHu-wVmh7YGsrWh33NkshXC4AyStJ5FAAsDWub0&dib_tag=se&hvadid=616931525911&hvdev=c&hvlocphy=9027790&hvnetw=g&hvqmt=e&hvrand=11169258220619959327&hvtargid=kwd-76676731&hydadcr=24660_13611807&keywords=the+linux+bible&qid=1712265409&sr=8-1"
+                            target="_blank">Linux Bible</a> by Christopher Negus<br>
+
+                        <a href="https://www.amazon.com/Linux-Administration-Beginners-Guide-Eighth/dp/1260441709/ref=sr_1_1?crid=2E8PS6AQ40RPW&dib=eyJ2IjoiMSJ9.g1I1Vy70bJsMjX7R2d16-X-88qHEtx9a_EiG9yVdteAU505zI9H9i68frP-VWDBhkSjlp-DfyFvhhSaLPwQa9YLS0P4UxaAoJwB_qnadiKfzln0Fj9pgcXHsafTW97K4hETJSbre1l-LYdABJX_2UVXHIOCZBxXVJSowZLZvkEyh5MG3fwsTBQ4BhLrcKWnak0cvNmXXpB6IDwxCUIm6auDfk0qngs9n1RNyyexy2n8.KdkInbRj3QuUkzD5-XDI9L8qHLOB9vyKaWP5IvGkADY&dib_tag=se&keywords=linux+administration+a+beginner%27s+guide&qid=1712265583&sprefix=Linux+ad%2Caps%2C185&sr=8-1"
+                            target="_blank">Linux Administration: A Beginner's Guide</a> by Wale Soyinka<br>
+                        <a href="https://www.amazon.com/Networking-All-One-Dummies-Computer/dp/1119689015/ref=sr_1_1?dib=eyJ2IjoiMSJ9.vFFPKXMeFS4my-r2g9ick9YzDRGu6glJenNuv7ldZz0ZGKzxVisTURtw5QjB5dxqNfC7qX5HzczUNJumvBDav1vuecqaUiXwboadtwK7O5mayl377NyPOdBHQLcVr167nQiPaSSmFKQiUTuPo6GbycB4RrwZOQGrYaar4Fko4wahxTUTFK-12Gd4EJLQq5_2onaCx79IfIliX9UzJE1BBLRVfXkPqBrJZWlNH-DcJfE.-CFc2H0a3MzOgbxRI8ITB00v-bbq9BdqJTctZDtVZCI&dib_tag=se&hvadid=598574096625&hvdev=c&hvlocphy=9027790&hvnetw=g&hvqmt=e&hvrand=14549309869521988330&hvtargid=kwd-24149293548&hydadcr=16434_13457203&keywords=networking+all-in-one+for+dummies&qid=1712265794&sr=8-1"
+                            target="_blank">Networking All-in-One For Dummies</a> by Doug Lowe<br>
+                        <a href="https://www.linuxfoundation.org" target="_blank">The Linux Foundation</a><br>
+                        Intro to The Command Line by Paige Crum for Girl Develop It
+                    </small>
+                </div>
+            </section>
+
+            <!-- Class 1 objectives -->
+            <section>
+                <h2>Class 1 Objectives</h2>
+                <div>
+                    <p>By the end of this first class we will know the basic history of Linux, "distros", virtualization
+                        and how it ties to the Linux operating system, installing the operating system, and basic
+                        terminal commands.
+                    </p>
+                </div>
+            </section>
+
+            <!-- History -->
+            <section>
+                <h4 class="left-align">Background of Linux</h4>
+                <ul>
+                    <li>Based on UNIX operating system created by AT&T in 1969.</li>
+                    <li>Created by Linus Torvalds in 1991, who was a student at University of Helsinki, Finland at the
+                        time.</li>
+                    <li>Open source code.</li>
+                    <li>Which other operating system is based on UNIX, but is NOT open source?</li>
+                </ul>
+            </section>
+
+            <!-- Question 2 -->
+            <section>
+                <h4>What's your experience with CSS Grid?</h4>
+                <ol>
+                    <li>Heard of it, but have yet to learn about or use it</li>
+                    <li>Have basic knowledge but it's still fairly new to me</li>
+                    <li>Use it freqently, but would like more practice</li>
+                    <li>I'm a CSS Grid Guru! 🔥</li>
+                </ol>
+            </section>
+        </div>
+        <!-- End of Slides container -->
+        <!---->
+        <!---->
+        <!-- Update Footer with Course Name -->
+        <footer>
+            <div class="copyright">
+                <img src="../shared-assets/imgs/gdi-logos/gdi-logo_peach.png" alt="GDI Logo" width="40px"
+                    class="noborder" />
+                <p>Introduction to Linux</p>
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img
+                        alt="Creative Commons License" style="border-width: 0"
+                        src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+            </div>
+        </footer>
+    </div>
+    <!-- End of Reveal wrapper -->
+    <!---->
+    <!---->
+    <!-- RevealJS Scripts & Config - Do Not Edit or Delete -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.5/js/jsplumb.min.js"></script>
+    <script src="../shared-assets/js/revealConfig.js"></script>
+</body>
+
+</html>
