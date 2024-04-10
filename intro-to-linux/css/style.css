@@ -89,3 +89,8 @@
 .reveal .fs-32 {
     font-size: 2rem;
 }
+
+.reveal i, span {
+    color: #f05b62;
+    font-style: italic;
+}

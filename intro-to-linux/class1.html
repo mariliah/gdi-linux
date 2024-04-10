@@ -122,7 +122,11 @@
                         <li>Basic System Administration</li>
                         <li>Final Project and Review</li>
                     </ol>
-                    <p class="left-align">Sources:</p>
+                </div>
+            </section>
+
+            <section>
+                <p class="left-align">Sources:</p>
                     <small> <a
                             href="https://www.amazon.com/Linux-Bible-Christopher-Negus/dp/1119578884/ref=sr_1_1?dib=eyJ2IjoiMSJ9.mNcvQtFzEy3kdjuvW7ViSp952YV2uuiWvHWs-p2qF2qJhqkouN0Afrh63CA2GLevpHlX83NW20nJS-QKLTRUVGWjAoMy13RJFyYTTlfn72ezx4d1cJRzYYTOm82QiitG0vHVFso3B7hLf53Q7yc9zBwEsfCanr1EscZKlFQn9-_Tmx7Aq4__waTymsOur3-NvQvDU5KkG2f6jrfZCXxeCms1ODzvm4dpgxLMneZnLSY.hMcUtHu-wVmh7YGsrWh33NkshXC4AyStJ5FAAsDWub0&dib_tag=se&hvadid=616931525911&hvdev=c&hvlocphy=9027790&hvnetw=g&hvqmt=e&hvrand=11169258220619959327&hvtargid=kwd-76676731&hydadcr=24660_13611807&keywords=the+linux+bible&qid=1712265409&sr=8-1"
                             target="_blank">Linux Bible</a> by Christopher Negus<br>
@@ -134,9 +138,7 @@
                         <a href="https://www.linuxfoundation.org" target="_blank">The Linux Foundation</a><br>
                         Intro to The Command Line by Paige Crum for Girl Develop It
                     </small>
-                </div>
             </section>
-
             <!-- Class 1 objectives -->
             <section>
                 <div class="data-bground-contrast">
@@ -161,6 +163,16 @@
                 </ul>
             </section>
 
+            <!-- UNIX/Linux background-->
+            <section>
+                <ul>
+                    <li>UNIX was a registered trademark owned by AT&T, which was eventually made into a commercial product.</li>
+                    <li>Written in the C programming language which made UNIX a portable operating system that could be installed in any computer,
+                        and improve development environments.
+                    </li>
+                    <li>Linus Torvalds, a university student in 1991 wrote a message on comp.os.minix stating he was working on an operating system, as a hobby, based of Minix which was a copy of UNIX operating system itself.</li>
+                </ul>
+            </section>
             <!-- Kernel -->
             <section>
                 <h4>Kernel</h4>
@@ -168,16 +180,93 @@
             <p>The kernel, think of it as a seed, is the heart of the computer's operating system, and for the most part has complete control over everything in the system.</p>
             </section>
 
-            <!-- Image -->
             <section>
                 <img src="./images/Kernel.png" width="900px" alt="infographic" />
             </section>
 
-            <!-- Kernel -->
+            <!-- Kernel continued -->
             <section>
                 <h4>Kernel (continued)</h4>
                 <a href="https://www.kernel.org/doc/html/latest/index.html#" target="_blank">The Linux Kernel</a> <br>
                 <a href="https://github.com/torvalds/linux/tree/master" target="_blank">GitHub Repo</a>
+            </section>
+
+            <!-- Why Linux? -->
+            <section>
+                <h4>Learn Linux! (they say)</h4>
+                <h5>But... why?</h5>
+                <p class="fragment">Although Windows, and macOS(to a certain extent) dominate PCs and laptops, Linux has become <i>the</i>
+                    operating system for: cloud computing, carrier data centers, financial markets, embedded systems, and more.<br>
+                    Because Linux is open-source, meaning anybody can modify or contribute to the source code, Linux can be changed to fit the needs of your business, and keep computing costs down.</p>
+                    
+                    <!-- https://web.archive.org/web/20200421021348/https://www.linuxfoundation.org/projects/case-studies/linux/ -->
+                        <p class="fragment">An estimated 90% of servers worldwide run on some version of Linux.</p>
+            </section>
+
+            <section>
+                <h4>Learn Linux (continued)</h4>
+                <p>
+                    Linux can be arranged to work in clusters so that multiple systems and machines appear as one to the public.
+                    Services can be configured to navigate between these clusters, while maintaining the appearance that they are running without interruption.
+                </p>
+                <p>
+                To manage your computing resources, Linux can run as a virtualization host. On this host you can run other Linux systems, Microsoft, as guest operating systems.
+                        (But still appear to be separate machines to the outside world).
+            </p>
+            <p>
+                "Linux can be configured for real-time computing, where high priority processes can expect fast, predictable attention."(The Linux Bible, page 5)
+                </p>
+            </section>
+
+
+            <!-- Virtualization -->
+            <section>
+                <h4>Virtualization</h4>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/FZR0rG3HKIk?si=vx6vONzNpqtw31C0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
+
+            <!-- Hypervisor -->
+            <section>
+                <h4>Hypervisors</h4>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LMAEbB2a50M?si=bHrZUvDhZP2cnR_H"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
+
+            <!--Installation/Usage-->
+            <section>
+                <h4>Installation</h4>
+                <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a><br>
+                <a href="https://aws.amazon.com/">Amazon AWS</a>
+            </section>
+
+            <!--Distribution-->
+            <section>
+                <h4>Ubuntu</h4>
+            <p>
+                For this class, we will be using Ubuntu Desktop, which can be found <a href="https://ubuntu.com/download/desktop">here</a><Br>
+                    <span>Why Ubuntu?</span> Ubuntu is one of the most widely used distributions by enterprises, and they have a very nice desktop experience for regular users.
+            </p>
+            </section>
+
+            <section>
+                <h4>Back up! What is a distribution?</h4>
+<p>Recall the "kernel." It could be seen as a seed, or also as the foundation of an operating system. A kernel is the core software that manages
+    hardware resources and allows other programs to communicate.
+</p>
+<p>A <i>distribution</i> (distro for short) is a complete house built on this foundation. It includes the kernel, but also adds essential tools and functionalities.</p>
+            </section>
+
+            <section>
+                <h4 class="left-align">Tools and Functionalities</h4>
+                <p><b>Package management system</b>: Imagine a toolbox. A distro's package manager lets you easily install, update, and remove software applications.</p>
+                <p><b>Shell and utilities</b>: The shell is a command-line interface that allows you to interact with the system. Utilities are like individual tools that perform specific tasks.</p>
+                <p><b>Desktop environment</b>(<span>optional</span>): This provides the graphical user interface (GUI) that everybody is familiar with on Windows or macOS. Some distros cater to server use and may not include a GUI by default!</p>
+                <p>Lastly, some distros come pre-loaded with a variety of applications for common tasks like browsing the web, writing documents, or playing media.</p>
             </section>
         </div>
         <!-- End of Slides container -->
