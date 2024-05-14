@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <!-- Update with GDI Course Name -->
-    <title>GDI Demo Slides Template</title>
+    <title>Introduction to Linux</title>
 
     <link rel="icon" type="image/x-icon" href="../shared-assets/imgs/favicon.ico" />
 
@@ -43,119 +43,116 @@
                 <h2 style="font-weight: bolder">Welcome to Girl Develop It</h2>
             </section>
 
-            <!-- Slide Title -->
-            <section>
-                <h3>Demo:</h3>
-                <h3>GDI's HTML Presentation Slides</h3>
-                <h4>
-                    Based on
-                    <a href="https://revealjs.com/" target="_blank">Reveal.js</a>
-                </h4>
-            </section>
 
             <!-- Intro -->
             <section>
-                <h3>Intro</h3>
+                <h3>User and Permission Management</h3>
+                <h4>Objectives</h4>
                 <ul>
-                    <li>
-                        Reveal.js is a framework for easily creating beautiful, animated HTML slide
-                        presentations.
-                    </li>
-                    <li>
-                        The following slides illustrate how to present GDI content with reveal.js.
-                    </li>
-                    <li>
-                        Copy code snippets from this demo file as needed to create GDI HTML slides.
-                    </li>
+                    <li>Understand the concept of users and groups in Linux.</li>
+                    <li>Learn to create, modify, and delete users and groups.</li>
+                    <li>Explore file permissions and ownership in Linux.</li>
+                    <li>Master the usage of commands for user and permission management.</li>
                 </ul>
             </section>
 
-            <!-- Headings -->
+            <!-- CIA Triad -->
             <section>
-                <h1>Heading h1</h1>
-                <h2>Heading h2</h2>
-                <h3>Heading h3</h3>
-                <h4>Heading h4</h4>
+                <h3>CIA Triad</h3>
+                <p>What is the CIA Triad?</p>
+                <p>In Cybersecurity, CIA stands for: Confidentiality, Integrity, and Availability. These principles form
+                    the foundation of information security practices and guide efforts to protect sensitive data and
+                    systems from various threats.</p>
             </section>
 
-            <!-- Paragraph -->
+            <!-- Confidentiality -->
             <section>
-                <p>Basic text style</p>
+                <h2>Confidentiality</h2>
+                <p>In Linux, user and permission management helps enforce condifentiality by controlling access to
+                    sensitive files, directories, and resources. By assigning appropriate permissions, system
+                    administrators can ensure that only authorized users have access to confidential information.
+                    For example, sensitive configuration files containing
+                    passwords or
+                    cryptographic keys
+                    can be restricted to read-only access by the owner, preventing unauthorized users from viewing or
+                    modifying them.
+                </p>
             </section>
 
-            <!-- Unordered List -->
+            <!-- Integrity -->
             <section>
-                <h3>Marvelous Unordered List</h3>
-                <ul>
-                    <li>No order here</li>
-                    <li>Or here</li>
-                    <li>Or here</li>
-                </ul>
+                <h2>Integrity</h2>
+                <p>User and permission management also contributes to maintaining the integrity of data and system files
+                    in Linux. By
+                    carefully managing user privileges and permissions, administrators can prevent unauthorized users
+                    from modifying
+                    critical system files or data. For instance, restricting write access to system binaries and
+                    configuration files helps
+                    prevent malicious users from tampering with them, ensuring the integrity and reliability of the
+                    system.
+                </p>
             </section>
 
-            <!-- Ordered List -->
+            <!-- Availability -->
             <section>
-                <h3>Fantastic Ordered List</h3>
-                <ol>
-                    <li>One is smaller than...</li>
-                    <li>Two is smaller than...</li>
-                    <li>Three!</li>
-                </ol>
+                <h2>Availability</h2>
+                <p>Effective user and permission management in Linux ensures the availability of system resources and
+                    data by preventing
+                    unauthorized users from disrupting or interfering with system operations. By controlling access to
+                    critical resources
+                    and directories, administrators can mitigate the risk of denial-of-service attacks and unauthorized
+                    modifications that
+                    could impact system availability. Additionally, implementing proper user authentication mechanisms
+                    helps ensure that
+                    system resources are accessible only to authorized users, maintaining uninterrupted service
+                    availability.
+                </p>
             </section>
 
-            <!-- Reveal Content -->
-            <section id="fragments">
-                <h2>Revealing Content</h2>
-                <h3 class="fragment">Content</h3>
-                <h3 class="fragment">More content...</h3>
-                <h3 class="fragment">Even more content...</h3>
-                <h3 class="fragment">And <span class="fragment">we're done</span></h3>
-                <p>CAVEAT: Use this feature sparingly</p>
-            </section>
-
-            <!-- Basic Image -->
+            <!-- What is user-->
             <section>
-                <h3>Images</h3>
-                <img src="../shared-assets/imgs/stock-img/celebration_dayne-topkin-unsplash.jpg" width="500px" alt="" />
-                <div>
-                    <p>Remember to give credit.</p>
-                    <small>Photo credit:
-                        <a href="https://unsplash.com/@dtopkin1" target="_blank">Dayne Topkin (Unsplash)</a>
-                    </small>
-                </div>
-            </section>
-
-            <!-- Image and Text -->
-            <section>
-                <h3>Image and Text</h3>
-                <div class="flex-container">
-                    <div class="flex-item">
-                        <img src="../shared-assets/imgs/stock-img/celebration_dayne-topkin-unsplash.jpg" alt="" />
-                    </div>
-                    <div class="flex-item">
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque quas
-                            quidem animi, architecto blanditiis... <br /><br />To reverse order,
-                            simply switch the code snippets.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Background Image -->
-            <section data-background="../shared-assets/imgs/stock-img/celebration_dayne-topkin-unsplash.jpg">
-                <h2 style="color: #fff; font-weight: 600">Add a background Image</h2>
+                <h3>What is a 'user' in Linux?</h3>
+                <p>Under Linux, every file and program must be owned by an entity (or user). This can be a human, a
+                    daemon, a thing, a group, and so on. Each user has a unique identifier called <i>user ID</i> (UID).
+                    Each user must belong to at least one <i>group</i> -- a collection of users. Users <i>may</i> belong
+                    to more than one group. Groups also have unique identifiers, called <i>group IDs</i> (GIDs).
+                </p>
             </section>
 
             <!-- Colored Background -->
-            <section data-background-color="#F0E182">
+            <section data-background-color="#f05b62">
                 <h4 style="color: #1a1735; font-weight: 600">
-                    Add Background Colors to Slides
+                    Permissions
                 </h4>
-                <h4 style="color: #1a1735; font-weight: 600">
-                    See
-                    <a href="https://brandfolder.com/gdi" target="_blank">GDI Brand Colors</a>
-                </h4>
+                <section>
+                    <h3>Tables for Tabular Data</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data type</th>
+                                <th>Example values</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Integers</td>
+                                <td><code>2</code> <code>44</code> <code>-3</code></td>
+                            </tr>
+                            <tr>
+                                <td>Floats</td>
+                                <td><code>3.14</code> <code>4.5</code> <code>-2.0</code></td>
+                            </tr>
+                            <tr>
+                                <td>Booleans</td>
+                                <td><code>True</code> <code>False</code></td>
+                            </tr>
+                            <tr>
+                                <td>Strings</td>
+                                <td><code>'¡hola!'</code> <code>'its python time!'</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
             </section>
 
             <!-- Animated Images or GIFs -->
@@ -180,36 +177,6 @@
             <section data-background-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4"
                 data-background-video-loop data-background-video-muted></section>
 
-            <!-- Tables -->
-            <section>
-                <h3>Tables for Tabular Data</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Data type</th>
-                            <th>Example values</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Integers</td>
-                            <td><code>2</code> <code>44</code> <code>-3</code></td>
-                        </tr>
-                        <tr>
-                            <td>Floats</td>
-                            <td><code>3.14</code> <code>4.5</code> <code>-2.0</code></td>
-                        </tr>
-                        <tr>
-                            <td>Booleans</td>
-                            <td><code>True</code> <code>False</code></td>
-                        </tr>
-                        <tr>
-                            <td>Strings</td>
-                            <td><code>'¡hola!'</code> <code>'its python time!'</code></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
 
             <!-- Slides with Code: Python  -->
             <section>
