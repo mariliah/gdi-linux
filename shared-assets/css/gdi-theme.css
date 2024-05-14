@@ -69,6 +69,11 @@ body {
     margin: 0 0 16px 0;
 }
 
+.reveal i {
+color:var(--gdi-pink);
+font-style: italic;
+}
+
 .reveal a:not(img) {
     color: #5500e5;
     text-decoration: none;
