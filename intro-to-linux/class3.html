@@ -122,39 +122,46 @@
             <!-- Colored Background -->
             <section data-background-color="#f05b62">
                 <h4 style="color: #1a1735; font-weight: 600">
-                    Permissions
+                    Commands
                 </h4>
                 <section>
-                    <h3>Tables for Tabular Data</h3>
+                    <h3>Create Users and Groups</h3>
                     <table>
                         <thead>
                             <tr>
-                                <th>Data type</th>
-                                <th>Example values</th>
+                                <th>Command</th>
+                                <th>What it does</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Integers</td>
-                                <td><code>2</code> <code>44</code> <code>-3</code></td>
+                                <td>useradd</td>
+                                <td>adds a new user</td>
                             </tr>
                             <tr>
-                                <td>Floats</td>
-                                <td><code>3.14</code> <code>4.5</code> <code>-2.0</code></td>
+                                <td>usermod</td>
+                                <td>modifies the user</td>
                             </tr>
                             <tr>
-                                <td>Booleans</td>
-                                <td><code>True</code> <code>False</code></td>
+                                <td>userdel</td>
+                                <td>deletes the user</td>
                             </tr>
                             <tr>
-                                <td>Strings</td>
-                                <td><code>'¡hola!'</code> <code>'its python time!'</code></td>
+                                <td>groupadd/del/mod/td>
+                                <td>create, delete, modify groups</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
             </section>
 
+            <section>
+                <h3>The /etc/passwd File</h3>
+                <p>This file stores the user's login, encrypted password entry, UID, default GID, name, home directory, and login shell.</p>
+                <pr><code class="bash">
+                    yyang: w: 1001 1001 Ying Yang /home/yyang /bin/bash
+                </code></pr>
+            </section>
 
             <!-- Conclusion -->
             <section>
