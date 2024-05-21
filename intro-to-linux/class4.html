@@ -87,201 +87,145 @@
                         Commands can be simple, like `ls` to list directory contents, or complex, involving pipelines and command chaining.
                     </li>
                     <li>Bash provides job control features, allowing users to run commands in the background, bring them to the foreground, and manage multiple tasks simultaneously.</li>
-                 </ul>
+                </ul>
             </section>
 <section>
 <h4>What is Bash <i>scripting</i>?</h4>
 <ul>
     <li>Bash scripting is the act of creating text files containing a series of commands that are executed sequentially.</li>
     <li>Scripts automate repetitive tasks, manage system configurations, and handle batch processing.</li>
+    <li><i>Programming constructs</i>: Bash supports control flow constructs such as if statements, loops (for, while), and functions, making it a powerful scripting language for automation.</li>
     </ul>
     </section>
-           
-         
+        
 
-            <!-- Kernel -->
+        
+
+            <!-- When to use Bash scripting -->
             <section>
-                <h4>Kernel</h4>
-                <p>What is the kernel?</p>
-                <p>The kernel, think of it as a seed, is the heart of the computer's operating system, and for the most
-                    part has complete control over everything in the system.</p>
+                <h4>When/Why to use Bash scripting?</h4>
+               <ul>
+                <li>To automate <i>simple</i> tasks.</li>
+                <li>Lightweight and always available.</li>
+                <li>Although there are more advanced tools/programming languages(Ansible and Python respectively), having a basic understanding of Bash scripting makes a big difference.</li>
+               </ul>
             </section>
 
-            <section data-background-color="#f05b62">
-                <img src="./images/Kernel.png" width="900px" alt="infographic" />
-            </section>
-
-            <!-- Kernel continued -->
-            <section>
-                <h4>Kernel (continued)</h4>
-                <a href="https://www.kernel.org/doc/html/latest/index.html#" target="_blank">The Linux Kernel</a> <br>
-                <a href="https://github.com/torvalds/linux/tree/master" target="_blank">GitHub Repo</a>
-            </section>
-
-            <!--Installation/Usage-->
-            <section>
-                <h4>Installation</h4>
-                <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">VirtualBox</a><br>
-                <a href="https://www.vmware.com/products/fusion/fusion-evaluation.html" target="_blank">VMware
-                    Fusion</a>
-            </section>
-
-            <!--Distribution-->
-            <section>
-                <h4>Ubuntu</h4>
-                <p>
-                    For this class, we will be using Ubuntu Desktop, which can be found <a
-                        href="https://ubuntu.com/download/desktop">here</a>.<Br>
-                    <span>Why Ubuntu?</span> Ubuntu is one of the most widely used distributions by enterprises, and
-                    they have a very nice desktop experience for regular users.
-                </p>
+            <!--Basics of Bash Scripting-->
+        <section>
+                <h4>Contents of a Bash script</h4>
+             <ul>
+                <li>Variables.</li>
+                <li>For/while loops.</li>
+                <li>User input.</li>
+                <li>Script output.</li>
+                <li>Parameters.</li>
+             </ul>
             </section>
 
             <!-- Why Linux? -->
             <section data-background-color="#f0e182">
-                <h4>Learn Linux! (they say)</h4>
-                <h5>But... why?</h5>
-                <p class="fragment">Although Windows, and macOS(to a certain extent) dominate PCs and laptops, Linux has
-                    become <i>the</i>
-                    operating system for: cloud computing, carrier data centers, financial markets, embedded systems,
-                    and more.<br>
-                    Because Linux is open-source, meaning anybody can modify or contribute to the source code, Linux can
-                    be changed to fit the needs of your business, and keep computing costs down.</p>
-
-                <!-- https://web.archive.org/web/20200421021348/https://www.linuxfoundation.org/projects/case-studies/linux/ -->
-                <p class="fragment">An estimated 90% of servers worldwide run on some version of Linux.</p>
+                <h4>Simple Bash Script</h4>
+            <pre>
+                <code>
+name="marilia"
+echo "Hello $name"
+                </code>
+            </pre>
             </section>
 
-            <section>
-                <h4>Learn Linux (continued)</h4>
-                <p>
-                    Linux can be arranged to work in clusters so that multiple systems and machines appear as one to the
-                    public.
-                    Services can be configured to navigate between these clusters, while maintaining the appearance that
-                    they are running without interruption.
-                </p>
-                <p>
-                    To manage your computing resources, Linux can run as a virtualization host. On this host you can run
-                    other Linux systems, Microsoft, as guest operating systems.
-                    (But still appear to be separate machines to the outside world).
-                </p>
-                <p>
-                    "Linux can be configured for real-time computing, where high priority processes can expect fast,
-                    predictable attention."(The Linux Bible, page 5)
-                </p>
-            </section>
+            <section data-background-color="#86a89f">
+                <h4>Simple Bash Script</h4>
+            <pre>
+                <code class="bash">
+#!/bin/bash
 
-            <!-- Virtualization
-            add a pop quiz at for the next slide, before hypervisors -->
-            <section>
-                <h4>Virtualization</h4>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/FZR0rG3HKIk?si=vx6vONzNpqtw31C0"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </section>
+# Check if the script is run as root
+if [[ $(id -u) ne 0]]; then
+echo "This script must be run as root."
+exit 1
+fi
 
-            <!-- Hypervisor
-            pop quiz on hypervisor, virtualbox and vmware, type 1 or type 2? -->
-            <section>
-                <h4>Hypervisors</h4>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/LMAEbB2a50M?si=bHrZUvDhZP2cnR_H"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </section>
-            <section>
-                <h4>POP QUIZ</h4>
-                <p>What type of hypervisors are VMware Fusion and VirtualBox?</p>
-                <ul>
-                    <li>Type 1</li>
-                    <li>Type 2</li>
-                </ul>
-            </section>
-            <section>
-                <h4>Back up! What is a distribution?</h4>
-                <p>Recall the "kernel." It could be seen as a seed, or also as the foundation of an operating system. A
-                    kernel is the core software that manages
-                    hardware resources and allows other programs to communicate.
-                </p>
-                <p>A <i>distribution</i> (distro for short) is a complete house built on this foundation. It includes
-                    the kernel, but also adds essential tools and functionalities.</p>
+# Function to add user to sudoers file
+add_users_to_sudoers() {
+    username="$1"
+    if grep -q "^username" /etc/passwd; then
+        # Check if the user is already in sudoers file
+        if grep -q "^$username" /etc/sudoers; then
+        echo "$username is already in sudoers file."
+        else
+        # Add the user to sudoers File
+        echo "$username ALL=(ALL) ALL >> /etc/sudoers"
+        echo "User $username added to sudoers file."
+    fi
+    else
+        echo "User $username does not exist."
+    fi
+}
+
+# Main script starts here
+if [[ $# -eq 0]]; then
+echo "Usage: $0 <username>"
+    exit 1
+fi
+
+    username="$1"
+    add_users_to_sudoers "$username"
+                </code>
+            </pre>
             </section>
 
             <section>
-                <h4 class="left-align">Tools and Functionalities</h4>
-                <p><b>Package management system</b>: Imagine a toolbox. A distro's package manager lets you easily
-                    install, update, and remove software applications.</p>
-                <p><b>Shell and utilities</b>: The shell is a command-line interface that allows you to interact with
-                    the system. Utilities are like individual tools that perform specific tasks.</p>
-                <p><b>Desktop environment</b>(<span>optional</span>): This provides the graphical user interface (GUI)
-                    that everybody is familiar with on Windows or macOS. Some distros cater to server use and may not
-                    include a GUI by default!</p>
-                <p>Lastly, some distros come pre-loaded with a variety of applications for common tasks like browsing
-                    the web, writing documents, or playing media.</p>
+                <h4>Variables</h4>
+                <p>Variables are a storage box where you can save strings and numbers. Variables allow you to</p>
             </section>
 
-            <!--Documentation-->
-            <section>
-                <a href="https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html" target="_blank">Filesystem
-                    Hierarchy Standard</a>
-            </section>
-            <!--Commands-->
-            <!-- talk about file directories first maybe?-->
-            <section data-background-color="#FACEC3">
-                <h4>Command Line Interface</h4>
-                <div class="flex-container">
-                    <div class="flex-item">
-                        <p>The command line interface (CLI), also known as a terminal emulator (or simply terminal) is a
-                            text-based command interpreter.</p>
-                    </div>
 
-                    <img src="../intro-to-linux/images/terminal.png" />
-                </div>
-            </section>
             <section>
-                <h4>Command Syntax</h4>
+                <h4>Script Parameters</h4>
+            <p>
+                In Bash scripting, parameters (also known as arguments) are used to pass information to a script or a function.
+                These parameters allow scripts to be dynamic and flexible.</p>
+            </section>
+
+            <section>
                 <pre>
                     <code class="bash">
-                        $ command -options targets
+                    #!/bin/bash
+                    # Simple calculator
+                    
+                    # Store the first parameter in num1 variable
+                    num1=$1
+
+                    # Store the second parameter in num2 variable
+                    num2=$2
+
+                    # Store the addition results in the total variable
+                    TOTAL=$(($num1 + $num2))
+
+                    echo '###########'
+                    printf "%s %d\n" "The total is=" $TOTAL
+                    echo '###########'
                     </code>
                 </pre>
             </section>
 
             <section>
-                <h4>pwd</h4>
-                <p>(Print Working Directory)</p>
-                <p>Type this command whenever you want to see what directory (folder) you are working in.</p>
+                <h4>User Input</h4>
+                Another way to interact with the supplied input from the shell script is to use the `read` function.
             </section>
 
-            <section>
-                <img src="../intro-to-linux/images/pwd.png" />
-            </section>
+           <section>
+            <pre>
+                <code class="bash">
+                    #!/bin/bash
+                    read -p "Please enter your first name:" FIRSTNAME
+                    read -p "Please enter your last name:" LASTNAME
 
-            <section>
-                <h4>What is a directory?</h4>
-                <p>A directory, also refered to as "folder" are containers for files or other directories.</p>
-                <h5>File Paths</h5>
-                <p>A sequence of nested directories, with a file or directory at the end.</p>
-                <p>Each directory or file is separated by a forward slash "/" (unlike Windows which is "\").</p>
-            </section>
-            <section>
-                <h4>Useful shortcuts</h4>
-                <ul>
-                    <!--parentheses for each dot-->
-                    <li><b>Current directory</b>: . </li>
-                    <li><b>Parent directory</b>: .. </li>
-                    <li><b>Home directory</b>: ~ </li>
-                    <li><b>Root directory</b>: / </li>
-                </ul>
-            </section>
-            <section>
-                <h4>cd</h4>
-                <p>Change Directory</p>
-                <p>Use the <b>cd</b> command to change directories. <i>This command expects a file path as an
-                        arguement.</i></p>
-                If no file path is given, it assumes your home directory (~) by default.
-            </section>
+                    printf "Your full name is: $FIRSTNAME $LASTNAME\n"
+                </code>
+            </pre>
+           </section>
             <section>
                 <img src="../intro-to-linux/images/cd.png">
             </section>
