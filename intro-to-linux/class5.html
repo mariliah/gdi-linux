@@ -76,189 +76,91 @@ communication between devices locally (within a small geographic area, like a ho
             </section>
 
             <section>
-                <h4 class="left-align">What is Bash? (continued)</h4>
+                <h4>Key concepts</h4>
                 <ul>
                     <li>
-                        Bash allows users to execute commands to interact with the operating systems.
+                        IP addressing (IPv4, IPv6)
                     </li>
                     <li>
-                        Commands can be simple, like `ls` to list directory contents, or complex, involving pipelines and command chaining.
+                        Subnetting
                     </li>
-                    <li>Bash provides job control features, allowing users to run commands in the background, bring them to the foreground, and manage multiple tasks simultaneously.</li>
+                    <li>
+                        Gateways
+                    </li>
+                    <li>
+                        Domain Name System (DNS)
+                    </li>
+                    <li>
+                        Network Interface Card (NIC)
+                    </li>
+                    <li>
+                        MAC Address
+                    </li>
                 </ul>
             </section>
-<section>
-<h4>What is Bash <i>scripting</i>?</h4>
-<ul>
-    <li>Bash scripting is the act of creating text files containing a series of commands that are executed sequentially.</li>
-    <li>Scripts automate repetitive tasks, manage system configurations, and handle batch processing.</li>
-    <li><i>Programming constructs</i>: Bash supports control flow constructs such as if statements, loops (for, while), and functions, making it a powerful scripting language for automation.</li>
-    </ul>
-    </section>
-        
 
-        
-
-            <!-- When to use Bash scripting -->
             <section>
-                <h4>When/Why to use Bash scripting?</h4>
-               <ul>
-                <li>To automate <i>simple</i> tasks.</li>
-                <li>Lightweight and always available.</li>
-                <li>Although there are more advanced tools/programming languages(Ansible and Python respectively), having a basic understanding of Bash scripting makes a big difference.</li>
-               </ul>
-            </section>
-
-            <!--Basics of Bash Scripting-->
-        <section>
-                <h4>Contents of a Bash script</h4>
-             <ul>
-                <li>Variables.</li>
-                <li>For/while loops.</li>
-                <li>User input.</li>
-                <li>Script output.</li>
-                <li>Parameters.</li>
-             </ul>
-            </section>
-
-            <!-- Why Linux? -->
-            <section data-background-color="#f0e182">
-                <h4>Simple Bash Script</h4>
-            <pre>
-                <code>
-name="marilia"
-echo "Hello $name"
-                </code>
-            </pre>
-            </section>
-
-            <section data-background-color="#86a89f">
-                <h4>Simple Bash Script</h4>
-            <pre>
-                <code class="bash">
-#!/bin/bash
-
-# Check if the script is run as root
-if [[ $(id -u) ne 0]]; then
-echo "This script must be run as root."
-exit 1
-fi
-
-# Function to add user to sudoers file
-add_users_to_sudoers() {
-    username="$1"
-    if grep -q "^username" /etc/passwd; then
-        # Check if the user is already in sudoers file
-        if grep -q "^$username" /etc/sudoers; then
-        echo "$username is already in sudoers file."
-        else
-        # Add the user to sudoers File
-        echo "$username ALL=(ALL) ALL >> /etc/sudoers"
-        echo "User $username added to sudoers file."
-    fi
-    else
-        echo "User $username does not exist."
-    fi
-}
-
-# Main script starts here
-if [[ $# -eq 0]]; then
-echo "Usage: $0 <username>"
-    exit 1
-fi
-
-    username="$1"
-    add_users_to_sudoers "$username"
-                </code>
-            </pre>
+                <h4 class="left-align">IP Addressing</h4>
+                <ul>
+                    <li>
+                        <span>IPv4</span>: Uses 32-bit addresses (e.g. 192.168.1.1) and is the most widely used version.
+                    </li>
+                    <li>
+                        <span>IPv6</span>: Uses 128-bit addresses (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334) to provide a larger address space and improve security and performance.
+                    </li>
+                </ul>
             </section>
 
             <section>
-                <h4>Variables</h4>
-                <p>Variables are a storage box where you can save strings and numbers. Variables allow you to</p>
+                <h4>Subnetting</h4>
+                <p>Divides a larger network into a smaller, manageable segments (subnets), improving efficiency and security.</p>
+            </section>
+            <section>
+                <h4>Gateways</h4>
+                <p>Devices that route traffic from a local network to other networks or the itnernet. The default gateway typically connects a local network to the broader internet.</p>
+            </section>
+
+            <section>
+                <h4>DNS</h4>
+                <p>Translates human-readable domain names (e.g., www.google.com) into IP addresses that computers use to identify each other on the network.</p>
             </section>
 
 
             <section>
-                <h4>Script Parameters</h4>
+                <h4>NIC</h4>
             <p>
-                In Bash scripting, parameters (also known as arguments) are used to pass information to a script or a function.
-                These parameters allow scripts to be dynamic and flexible.</p>
+                Hardware that connects a computer to a network, either via cable (Ethernet) or wirelessly (Wi-Fi).</p>
             </section>
 
             <section>
-                <pre>
-                    <code class="bash">
-                    #!/bin/bash
-                    # Simple calculator
-                    
-                    # Store the first parameter in num1 variable
-                    num1=$1
-
-                    # Store the second parameter in num2 variable
-                    num2=$2
-
-                    # Store the addition results in the total variable
-                    TOTAL=$(($num1 + $num2))
-
-                    echo '###########'
-                    printf "%s %d\n" "The total is=" $TOTAL
-                    echo '###########'
-                    </code>
-                </pre>
+                <h4>NIC</h4>
+                <img src="./images/NIC.png" width="400px" alt="Stonehenge" />
             </section>
-
+           
             <section>
-                <h4>User Input</h4>
-                Another way to interact with the supplied input from the shell script is to use the `read` function.
+                <h4>MAC Address</h4>
+               <p>A unique identifier assigned to a NIC. It is used for communication within a local network segment.</p>
             </section>
-
-           <section>
-            <pre>
-                <code class="bash">
-                    #!/bin/bash
-                    read -p "Please enter your first name:" FIRSTNAME
-                    read -p "Please enter your last name:" LASTNAME
-
-                    printf "Your full name is: $FIRSTNAME $LASTNAME\n"
-                </code>
-            </pre>
-        </section>
+<section>
+    <h4>Networking in practice</h4>
+    <ul>
+        <li>
+            Devices (computers, printers, smartphones) are connected to a network through NICs.
+        </li>
+        <li>
+            Each device is assigned an IP address, either manually (static) or automatically via DHCP (Dynamic Host Configuration Protocol).
+        </li>
+        <li>
+            Devices communicate with each other using IP addresses, and data is routed through gateways to reach other networks or the internet.
+        </li>
+        <li>
+            DNS servers are used to resolve domain names to IP addresses, allowing users to access websites using human-readable names.
+        </li>
+    </ul>
+</section>
             <section>
-                <img src="../intro-to-linux/images/cd.png">
-            </section>
-            <section>
-                <h4>ls and ls -la</h4>
-                <p>List Command</p>
-                <p>Use the <b>ls</b> command to view content of a directory. </p>
-            </section>
-            <section>
-                <img src="../intro-to-linux/images/ls.png">
-            </section>
-            <section>
-                <h4>mkdir</h4>
-                <p>Make Directory Command</p>
-                <p>Use the <b>mkdir</b> command to create a directory. </p>
-            </section>
-            <section>
-                <img src="../intro-to-linux/images/mkdir.png">
-            </section>
-            <section>
-                <h4>rmdir or rm</h4>
-                <p>Remove Directory Command</p>
-                <p>Use the <b>rmdir</b> command to remove a directory. </p>
-            </section>
-            <section>
-                <img src="../intro-to-linux/images/rmdir.png">
-            </section>
-            <section>
-                <h1>WARNING ABOUT RMDIR</h1>
-                <p>When you remove a directory, or a file, it does not go into "Trash", it is permanently deleted!
-                    Please do <i>not</i> ever run the command rm -rf /*, because this will delete all the files and
-                    directories of your computer!</p>
-            </section>
-            <section>
-                <img src="../intro-to-linux/images/rmrf.png">
+                <h4>TCP/IP model</h4>
+                <img src="./images/tcp-ip-model.webp" />
             </section>
         </div>
     </div>
