@@ -215,7 +215,7 @@ fi
                 Another way to interact with the supplied input from the shell script is to use the `read` function.
             </section>
 
-           <section>
+        <section>
             <pre>
                 <code class="bash">
                     #!/bin/bash
@@ -227,40 +227,28 @@ fi
             </pre>
         </section>
             <section>
-                <img src="../intro-to-linux/images/cd.png">
+                <h4>Functions</h4>
+                <p>Functions allow you to organize your Bash script into logical sections instead of having unorganized structure.</p>
+                <p>Functions are almost the same as variables, they store information to be reused over and over again.</p>
             </section>
             <section>
-                <h4>ls and ls -la</h4>
-                <p>List Command</p>
-                <p>Use the <b>ls</b> command to view content of a directory. </p>
+                <h4>Conditions</h4>
+                <p>An `if` statement takes the following pattern:<br>
+                    if [[ comparison ]] <br>
+                    then <br>
+                    True, do something <br>
+                    else <br>
+                    False, Do something else <br>
+                    fi <br>
+ </p>
             </section>
             <section>
-                <img src="../intro-to-linux/images/ls.png">
-            </section>
-            <section>
-                <h4>mkdir</h4>
-                <p>Make Directory Command</p>
-                <p>Use the <b>mkdir</b> command to create a directory. </p>
-            </section>
-            <section>
-                <img src="../intro-to-linux/images/mkdir.png">
-            </section>
-            <section>
-                <h4>rmdir or rm</h4>
-                <p>Remove Directory Command</p>
-                <p>Use the <b>rmdir</b> command to remove a directory. </p>
-            </section>
-            <section>
-                <img src="../intro-to-linux/images/rmdir.png">
-            </section>
-            <section>
-                <h1>WARNING ABOUT RMDIR</h1>
-                <p>When you remove a directory, or a file, it does not go into "Trash", it is permanently deleted!
-                    Please do <i>not</i> ever run the command rm -rf /*, because this will delete all the files and
-                    directories of your computer!</p>
-            </section>
-            <section>
-                <img src="../intro-to-linux/images/rmrf.png">
+                <h4>Loops</h4>
+                <p>You can write loops in two different ways: using a while loop or using a for loop.<br>
+                while [[ condition ]]<br>
+                do <br>
+                do something <br>
+                done </p>
             </section>
         </div>
     </div>
