@@ -160,7 +160,70 @@ communication between devices locally (within a small geographic area, like a ho
 </section>
             <section>
                 <h4>TCP/IP model</h4>
+                <p>Host-to-Host is still called "transport" layer in TCP/IP.</p>
                 <img src="./images/tcp-ip-model.webp" />
+            </section>
+            <section>
+                <h4>Transport protocols</h4>
+                <p>
+                    <ul>
+                        <li>
+                           <span>Transmission Control Protocol (TCP)</span>: The main protocol used in infrastructure. Applications severs (HTTP, FTP, SMTP) use this protocol to properly connect the client with the server.
+                        </li>
+                        <li>
+                            TCP uses a concept called a three-way handshake to establish a network connection.
+                        </li>
+                    </ul>
+                </p>
+                <img src="./images/threewayhandshake.jpg" width="450px"/>
+            </section>
+            <section>
+                <h4>Transport protocols (continued)</h4>
+                <p>
+                    <ul>
+                        <li>
+                           <span>User Datadram Protocol (UDP)</span>: A <span>connectionless</span> network connection.
+                        </li>
+                        <li>
+                            UDP does not guarantee packet transmission, so there is no three-way handshake.
+                        </li>
+                        <li>Example usage: applications that stream video and audio.</li>
+                    </ul>
+                </p>
+            </section>
+            <section>
+                <h4>Other Networking protocols</h4>
+                <p>
+                    <ul>
+                        <li>
+                          <span>Internet Control Message Protocol (ICMP)</span>: This protocol is used for testing connectivity. The `ping` command sends packets to the destination IP to test connectivity.
+                        </li>
+                        <li>
+                           <span>Address Resolution Protocol (ADP)</span>: It is a mechanism that maps IPv4 addresses to MAC addresses. This concept is important for an internal network to work.
+                        </li>
+                    </ul>
+                </p>
+            </section>
+            <section>
+                <h4>Commands</h4>
+                <ul>
+                    <li>
+                        ifconfig(old): Displays information about network interfaces.
+                    </li>
+                    <li>
+                        <!--https://opensource.com/article/21/1/ifconfig-ip-linux#:~:text=The%20ip%20command%20is%20more,one%20reason%20it's%20more%20versatile.-->
+                        ip a(new): Provides detailed information about all network interfaces.
+                    </li>
+                    <li>
+                        ping: Tests connectivity to a specified IP address or hostname.
+                    </li>
+                    <li>
+                        traceroute: Traces the route packets take to reach a destination.<br>
+                        <span style="font-size:20px">(A packet is a small unit of data transmitted voer a network. In the context of computer networking, it refers to a formatted block of information that includes both the data being transmitted and control informaiton
+                        such as source and destination addresses, error checking, and sequencing information).
+                        </span>
+                    </li>
+                </ul>
             </section>
         </div>
     </div>
