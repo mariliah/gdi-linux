@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description"
+        content="Girl Develop It framework for easily creating beautiful presentations using HTML in GDI theme. Based on Hakim El Hattab's reveal.js" />
+    <meta name="author" content="Girl Develop It" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Update with GDI Course Name -->
+    <title>Introduction to Linux</title>
+
+    <link rel="icon" type="image/x-icon" href="../shared-assets/imgs/favicon.ico" />
+
+    <!-- RevealJS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/simple.css" id="theme" />
+
+    <!-- GDI Custom Theme -->
+    <link rel="stylesheet" href="../shared-assets/css/gdi-theme.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/monokai.min.css" />
+
+    <!-- Course Custom Styles if Applicable-->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Start of Slides container -->
+        <!-- Any section element in this container is displayed as a single slide -->
+        <!-- Comment out rather than delete slide instructions -->
+        <div class="slides">
+            <!-- Class 1 exercises -->
+            <section>
+                <h2>Class 1 Exercises</h2>
+            </section>
+
+            <!-- Exercise #1 -->
+            <section>
+                <h4>Exercise #1</h4>
+                <ol>
+                    <li>Run the `ifconfig` command to display network interfaces</li>
+                    <li>Identify the IP address, netmask, and MAC address of the primary network interface</li>
+                </ol>
+            </section>
+
+            <!-- Exercise #2 -->
+            <section>
+                <h4>Exercise #2</h4>
+                <ol>
+                    <li>Run the `ip a` command to show detailed information about network interfaces</li>
+                    <li>Note the same details: IP address, netmask, and MAC address</li>
+                </ol>
+            </section>
+
+            <!-- Exercise #3 -->
+            <section>
+                <h4>Exercise #3</h4>
+                <ol>
+                    <li>Run the `ping` command to check connecticity to a known website</li>
+                    <li>ping google.com</li>
+                    <li>ping the local router: 192.168.1.1</li>
+                </ol>
+            </section>
+
+            <!-- Exercise #4 -->
+            <section>
+                <h4>Exercise #4</h4>
+                <ol>
+                    <li>Use the `ifconfig` command to assign a static IP address to the primary interface (replace `eth0` with the correct interface name if different)</li>
+                    <li>sudo ifconfig eth0 192.168.1.100 netmask 255.255.255.0</li>
+                    <li>Verify the new IP address by running `ifconfig` again</li>
+                </ol>
+            </section>
+
+        </div>
+        <!-- End of Slides container -->
+        <!---->
+        <!---->
+        <!-- Update Footer with Course Name -->
+        <footer>
+            <div class="copyright">
+                <img src="../shared-assets/imgs/gdi-logos/gdi-logo_peach.png" alt="GDI Logo" width="40px"
+                    class="noborder" />
+                <p>Introduction to Linux</p>
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img
+                        alt="Creative Commons License" style="border-width: 0"
+                        src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+            </div>
+        </footer>
+    </div>
+    <!-- End of Reveal wrapper -->
+    <!---->
+    <!---->
+    <!-- RevealJS Scripts & Config - Do Not Edit or Delete -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.5/js/jsplumb.min.js"></script>
+    <script src="../shared-assets/js/revealConfig.js"></script>
+</body>
+
+</html>
